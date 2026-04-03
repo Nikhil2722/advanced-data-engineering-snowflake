@@ -168,6 +168,19 @@ CREATE OR ALTER TABLE {{env}}_tasty_bytes.raw_pos.order_detail
 );
 
 
+CREATE OR ALTER TABLE {{env}}_tasty_bytes.raw_pos.order_NONE
+(
+   order_detail_id NUMBER(38,0),
+   order_id NUMBER(38,0),
+   menu_item_id NUMBER(38,0),
+   discount_id VARCHAR(16777216),
+   line_number NUMBER(38,0),
+   quantity NUMBER(5,0),
+   unit_price NUMBER(38,4),
+   price NUMBER(38,4),
+   order_item_discount_amount VARCHAR(16777216)
+);
+
 -- customer loyalty table build
 CREATE OR ALTER TABLE {{env}}_tasty_bytes.raw_customer.customer_loyalty
 (
